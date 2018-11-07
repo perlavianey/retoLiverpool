@@ -16,7 +16,6 @@ class SearchContainer extends Component{
 
     //Buscar producto
      search=(productName)=>{
-         console.log(productName)
         if(productName===""){ //Si el usuario no introduce un producto a buscar, le mostramos el sig. msj:
             message.error("Introduzca el nombre de un producto para buscarlo")
         }

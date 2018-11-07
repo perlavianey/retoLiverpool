@@ -12,11 +12,11 @@ class ProductContainer extends Component{
         product:[]
     }
 
+    //Obtener la info del producto al cargar la página
     componentWillMount =()=>{
         getProduct(this.props.match.params.productId)
         .then(product => {
-            console.log(product.data.contents[0].mainContent[0].record)
-            return this.setState({product:product.data.contents[0].mainContent[0].record})
+            return this.setState({product:product.data.contents[0].mainContent[0].record}) //Setearla en el state para poder mostrarla
         })
         .catch(e=>{console.log(e)})
      }
